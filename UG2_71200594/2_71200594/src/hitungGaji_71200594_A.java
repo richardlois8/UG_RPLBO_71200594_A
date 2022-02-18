@@ -28,6 +28,7 @@ public class hitungGaji_71200594_A {
                 System.out.println("Potongan : " + potongan);
                 System.out.println("Total : Rp. " + (gajiIdeal - potongan));
             }
+            System.out.println("------------------");
         }
         inp.close();
     }

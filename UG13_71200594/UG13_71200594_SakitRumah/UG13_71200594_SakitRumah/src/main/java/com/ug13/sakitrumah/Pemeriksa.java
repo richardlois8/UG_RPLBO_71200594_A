@@ -14,10 +14,9 @@ public class Pemeriksa {
     public void memeriksa(Pengunjung pengunjung, Jadwal jadwal){
         if(jadwal.getPengunjung().equals(pengunjung) && jadwal.getStatusScreening()) {
             if(pengunjung.getLevelPenyakit() <= 0) {
-                pengunjung.setLevelPenyakit(0);
                 pengunjung.setStatus(true);
             }
-            else {
+            else if(pengunjung.getLevelPenyakit() > 0){
                 int newLevel = pengunjung.getLevelPenyakit() - 1;
                 pengunjung.setLevelPenyakit(newLevel);
             }
